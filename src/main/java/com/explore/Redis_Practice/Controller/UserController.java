@@ -30,10 +30,12 @@ public class UserController {
         return userService.getUser(id);
     }
 
+
     @PutMapping("/{id}")
     public ResponseEntity<String> updateUser (@PathVariable Integer id, @RequestBody Users updatedUser) throws Exception {
         return userService.updateUser(id, updatedUser);
     }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable Integer id){
